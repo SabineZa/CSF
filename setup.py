@@ -1,18 +1,18 @@
 import platform
 from setuptools import setup, Extension
 
-if platform.system() == "Windows":
-    openmp_args = ["/openmp"]
-    openmp_linking_args = []
-    openmp_macro = [("CSF_USE_OPENMP", None)]
-elif platform.system() == "Linux":
-    openmp_args = ["-fopenmp"]
-    openmp_linking_args = ["-fopenmp"]
-    openmp_macro = [("CSF_USE_OPENMP", None)]
-else:  # macOS, macOS clang won't come with openmp
-    openmp_args = []
-    openmp_linking_args = []
-    openmp_macro = []
+# if platform.system() == "Windows":
+#    openmp_args = ["/openmp"]
+#    openmp_linking_args = []
+#    openmp_macro = [("CSF_USE_OPENMP", None)]
+#if platform.system() == "Linux":
+#    openmp_args = ["-fopenmp"]
+#    openmp_linking_args = ["-fopenmp"]
+#    openmp_macro = [("CSF_USE_OPENMP", None)]
+# else:  # macOS, macOS clang won't come with openmp
+openmp_args = []
+openmp_linking_args = []
+openmp_macro = []
 
 with open("README.md", encoding="utf8") as readme:
     readme_content = readme.read()
