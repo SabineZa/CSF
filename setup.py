@@ -34,9 +34,9 @@ csf_module = Extension(
     name="_CSF",
     sources=sources,
     include_dirs=include_dirs,
-    extra_compile_args=openmp_args,
-    extra_link_args=openmp_linking_args,
-    define_macros=openmp_macro
+    # extra_compile_args=openmp_args,
+    # extra_link_args=openmp_linking_args,
+    # define_macros=openmp_macro
 )
 
 setup(
